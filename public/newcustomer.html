@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stoan Optical</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js" integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="./assets/css/newcustomer.css">
+</head>
+<body>
+    <div class="new-customer">
+        <div class="row main-title">
+            New Customer
+        </div>
+        <form>
+            <div class="row form-sec">
+                <label for="name" class="form-title">Name</label>
+                <div class="row">
+                    <div class="col-md-5">
+                        <input type="text" class="form-control" id="fname" placeholder="First Name" required>
+                    </div>
+                    <div class="col-md-7">
+                        <input type="text" class="form-control" id="lname" placeholder="Last Name" required>
+                    </div>
+                </div>
+            </div>
+            <div class="row form-sec">
+                <label for="contact" class="form-title">Contact Information</label>
+                <div class="row">
+                    <div class="col-md-7">
+                        <input type="email" class="form-control" id="email" placeholder="Email Address">
+                    </div>
+                    <div class="col-md-5">
+                        <input type="tel" class="form-control" id="phone" placeholder="Phone Number" required>
+                    </div>
+                </div>
+            </div>
+            <div class="row form-sec">
+                <label for="contact" class="form-title">Address Information</label>
+                <div class="row">
+                    <div class="col-md-12">
+                        <input type="text" class="form-control" id="address" placeholder="Address">
+                    </div>
+                    <div class="col-md-5">
+                        <input type="text" class="form-control" id="city" placeholder="City" required>
+                    </div>
+                    <div class="col-md-4">
+                        <select class="form-select" id="province">
+                            <option value="1"selected>Ontario</option>
+                            <option value="2">Alberta</option>
+                            <option value="3">British Columbia</option>
+                            <option value="4">Manitoba</option>
+                            <option value="5">Newfoundland/Labrador</option>
+                            <option value="6">Northwest Territories</option>
+                            <option value="7">Nova Scotia</option>
+                            <option value="8">Prince Edward Island</option>
+                            <option value="9">Quebec</option>
+                            <option value="10">Saskatchewan</option>
+                            <option value="11">Yukon</option>
+                        </select>
+                    </div>
+                    <div class="col-md-3">
+                        <input type="text" class="form-control" id="postal" placeholder="Postal Code" required>
+                    </div>
+                </div>
+            </div>
+            <div class="d-grid gap-2 d-md-flex justify-content-md-end">
+                <button class="btn btn btn-secondary me-md-2" type="submit" onclick="addNewCustomer()">Submit</button>
+                <button class="btn btn btn-secondary" type="reset">Reset</button>
+            </div>
+        </form>
+    </div>
+    <script src="./assets/js/newcustomer.js"></script>
+    
+</body>
+</html>

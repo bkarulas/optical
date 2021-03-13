@@ -1,0 +1,26 @@
+<h1>REGISTER PAGE</h1>
+
+<form action='/auth/register' method="POST">
+    <div>
+        <lable for='fname'>First Name</lable>
+        <input type='text' id='fname' name='fname' required>
+    </div>
+    <div>
+        <lable for='lname'>Last Name</lable>
+        <input type='text' id='lname' name='lname' required>
+    </div>
+    <div>
+        <lable for='email'>Email</lable>
+        <input type='email' id='email' name='email' required>
+    </div>
+    <div>
+        <lable for='phone'>Phone</lable>
+        <input type='tel' id='phone' name='phone'>
+    </div>
+    <div>
+        <lable for='password'>Passowrd</lable>
+        <input type='password' id='password' name='password' required>
+    </div>
+    <button type='submit'>Register</button>
+</form>
+<a href="/login">Login</a>

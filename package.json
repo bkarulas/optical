@@ -1,0 +1,38 @@
+{
+  "name": "stoyanoptical",
+  "version": "1.0.0",
+  "description": "Business application for optical stores",
+  "main": "server.js",
+  "scripts": {
+    "devStart": "nodemon server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/bkarulas/stoyanoptical.git"
+  },
+  "keywords": [
+    "optical",
+    "business"
+  ],
+  "author": "Boris Karulas",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/bkarulas/stoyanoptical/issues"
+  },
+  "homepage": "https://github.com/bkarulas/stoyanoptical#readme",
+  "dependencies": {
+    "bcrypt": "^5.0.1",
+    "ejs": "^3.1.6",
+    "express": "^4.17.1",
+    "express-flash": "0.0.2",
+    "express-session": "^1.17.1",
+    "mysql2": "^2.2.5",
+    "passport": "^0.4.1",
+    "passport-local": "^1.0.0",
+    "uuid": "^8.3.2"
+  },
+  "devDependencies": {
+    "dotenv": "^8.2.0",
+    "nodemon": "^2.0.7"
+  }
+}
