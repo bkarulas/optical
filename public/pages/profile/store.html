@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HOME</title>
+    <link rel="stylesheet" href="../assets/css/main.css">
+    <link rel="stylesheet" href="../assets/css/form.css">
+    <link rel="stylesheet" href="../assets/css/store.css">
+</head>
+<body>
+    <section class='main-sec'>
+        <div class = 'page-title'>Store</div>
+        <section id='new-customer'>
+            <div class='form-main-title'>New Store Info</div>
+            <form class='form-main' id='newcustomerform'>
+                <div class="form-option form-w10">
+                    <label class="form-title">Store Name</label>
+                    <input type="text" class="form-input" id="form-name">
+                </div>
+                <div class="form-option form-w10">
+                    <label class="form-title">Email Address</label>
+                    <input type="text" class="form-input" id="form-email">
+                </div>
+                <div class="form-option form-w5">
+                    <label class="form-title">Phone Number</label>
+                    <input type="text" class="form-input" id="form-hphone">
+                </div>
+                <div class="form-option form-w5">
+                    <label class="form-title">Fax Number</label>
+                    <input type="text" class="form-input" id="form-cphone">
+                </div>
+                <div class="form-option form-w10">
+                    <label class="form-title">Home Address</label>
+                    <input type="text" class="form-input" id="form-address">
+                </div>
+                <div class="form-option form-w5">
+                    <label class="form-title">City</label>
+                    <select class="form-input" id="form-city"></select>
+                </div>
+                <div class="form-option form-w5">
+                    <label class="form-title">Provence</label>
+                    <select class="form-input" id="form-prov"></select>
+                </div>
+                <div class="form-option form-w5">
+                    <label class="form-title">Country</label>
+                    <select class="form-input" id="form-country"></select>
+                </div>
+                <div class="form-option form-w5">
+                    <label class="form-title">Postal Code</label>
+                    <input type="text" class="form-input" id="form-postal">
+                </div>
+                <div class='form-button-group'>
+                    <input type='reset' class='form-button' value="RESET">
+                    <input type='submit' class='form-button' value="SUBMIT" onclick="addNewStore()">
+                </div>
+            </form>
+        </section>
+    </section>
+    <script src="../assets/js/script.js"></script>
+    <script src="../assets/js/store.js"></script>
+
+</body>
+</html>

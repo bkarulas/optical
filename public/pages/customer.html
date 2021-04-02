@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HOME</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link rel="stylesheet" href="../assets/css/main.css">
+    <link rel="stylesheet" href="../assets/css/form.css">
+    <link rel="stylesheet" href="../assets/css/customer.css">
+</head>
+<body>
+    <section id='navBar'>
+        <div class="topnav" id="myTopnav">
+            <a href="/" class="active">Home</a>
+            <a href="/customer">Customers</a>
+            <a href="#contact">Contact</a>
+            <a href="#about">About</a>
+            <div class="dropdown">
+              <button class="dropbtn">
+                <i class="fas fa-user-circle"></i>  
+                <span id='loggedinuser'></span>
+              </button>
+              <div class="dropdown-content">
+                <a href="#">Profile</a>
+                <a href="/store">Store</a>
+                <a><form action='auth/logout' method="GET"><button type='submit'>Log Out</button></form></a>
+              </div>
+            </div>
+            
+            <a href="javascript:void(0);" class="icon" onclick="myFunction()">&#9776;</a>
+          </div>
+    </section>
+
+    <section id='title-bar'>
+        <img src="../assets/image/logo_long.png" alt="store_logo">
+    </section>
+
+    <section class='main-sec'>
+        <div class = 'page-title'>Customers</div>
+        <button type='text' id='new-customer-btn' onclick="newCustomerForm()">NEW CUSTOMER</button>
+        <section id='new-customer' style="display: none;">
+            <div id='form-title' class='form-main-title'></div>
+            <form class='form-main' id='newcustomerform'>
+                <div class="form-option form-w4">
+                    <label class="form-title">First Name</label>
+                    <input type="text" class="form-input" id="form-fname">
+                </div>
+                <div class="form-option form-w6">
+                    <label class="form-title">Last Name</label>
+                    <input type="text" class="form-input" id="form-lname">
+                </div>
+                <div class="form-option form-w10">
+                    <label class="form-title">Email Address</label>
+                    <input type="text" class="form-input" id="form-email">
+                </div>
+                <div class="form-option form-w3">
+                    <label class="form-title">Home Number</label>
+                    <input type="text" class="form-input" id="form-hphone">
+                </div>
+                <div class="form-option form-w3">
+                    <label class="form-title">Cell Number</label>
+                    <input type="text" class="form-input" id="form-cphone">
+                </div>
+                <div class="form-option form-w3">
+                    <label class="form-title">Work Number</label>
+                    <input type="text" class="form-input" id="form-wphone">
+                </div>
+                <div class="form-option form-w10">
+                    <label class="form-title">Home Address</label>
+                    <input type="text" class="form-input" id="form-address">
+                </div>
+                <div class="form-option form-w5">
+                    <label class="form-title">City</label>
+                    <select class="form-input" id="form-city"></select>
+                </div>
+                <div class="form-option form-w5">
+                    <label class="form-title">Provence</label>
+                    <select class="form-input" id="form-prov"></select>
+                </div>
+                <div class="form-option form-w5">
+                    <label class="form-title">Country</label>
+                    <select class="form-input" id="form-country"></select>
+                </div>
+                <div class="form-option form-w5">
+                    <label class="form-title">Postal Code</label>
+                    <input type="text" class="form-input" id="form-postal">
+                </div>
+                <div class="form-option form-w10">
+                    <div class='form-check'>
+                        <label class="form-title-check">Check here if the user has an insurance plan</label>
+                        <input type="checkbox" class="form-input-check" id="form-plan" >
+                    </div>
+                </div>
+                <div class='form-button-group'>
+                    <button id='resetBtn' class='form-button'></button>
+                    <button id='submitBtn' type='submit' class='form-button'>SUBMIT</button>
+                </div>
+            </form>
+        </section>
+        <section id='search-customer'>
+            <div class='form-main'>
+                <div class="form-option">
+                    <label class="form-title">Customer Search</label>
+                    <input type="text" class="form-input" id="form-search" placeholder="Search by name, email or phone number">
+                </div>
+            </div>
+            <div id='search-results'></div>
+        </section>
+
+        <section id='one-customer' style="display: none;">
+            <div class='customer-main-title'>
+                <div id='customer-name'></div>
+                <div id = 'customer-x' onclick='window.location.reload()'>X</div>
+            </div>
+            <div class='all-customer-info'>
+                <div class='customer-info-sec'>
+                    <div class='customer-info form-w10' id = 'customer-info-email'></div>
+                    <div class='customer-info-title form-w10'>Email</div>
+                </div>
+                <div class='customer-info-sec'>
+                    <div class='customer-info'>
+                        <div id = 'customer-info-hphone' class='form-w3 left'></div>
+                        <div id = 'customer-info-cphone' class='form-w3 left'></div>
+                        <div id = 'customer-info-wphone' class='form-w3 left'></div>
+                    </div>
+                    <div class='customer-info-title'>
+                        <div id = 'customer-info-hphone-title' class='form-w3 left'>Home Phone</div>
+                        <div id = 'customer-info-cphone-title' class='form-w3 left'>Cell Phone</div>
+                        <div id = 'customer-info-wphone-title' class='form-w3 left'>Work Phone</div>
+                    </div>
+                </div>
+                <div class='customer-info-sec'>
+                    <div class='customer-info'>
+                        <div class='form-w6' id = 'customer-info-address'></div>
+                        <div class='form-w3' id = 'customer-info-city'></div>
+                    </div>
+                    <div class='customer-info-title'>
+                        <div class='form-w6'>Address</div>
+                        <div class='form-w3'>City</div>
+                    </div>
+                    <div class='customer-info'>
+                        <div class='form-w4' id = 'customer-info-prov'></div>
+                        <div class='form-w2' id = 'customer-info-country'></div>
+                        <div class='form-w2' id = 'customer-info-postal'></div>
+                    </div>
+                    <div class='customer-info-title'>
+                        <div class='form-w4'>Provence</div>
+                        <div class='form-w2'>Country</div>
+                        <div class='form-w2'>Postal Code</div>
+                    </div>
+                    <div class='customer-info-title plan-main'>
+                        <div class='customer-info-plan'>
+                            <div class='form-w2 plan-title'>PLAN:</div>
+                            <i class="fas fa-check-circle form-w2"></i>
+                            <i class="fas fa-times-circle form-w2" style="display: none;"></i>
+                        </div>
+                    </div>
+                </div>
+                <div class='customer-info-sec' id ='customer-btn'></div>
+            </div>
+            
+        </section>
+    </section>
+    <script src="../assets/js/script.js"></script>
+    <script src="../assets/js/customer.js"></script>
+
+</body>
+</html>

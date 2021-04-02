@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <link rel="stylesheet" href="../assets/css/rest.css">
+        <title>Signup</title>
+        <meta charset="UTF-8">
+        <link rel="stylesheet" href="../assets/css/main.css">
+        <link rel="stylesheet" href="../assets/css/form.css">	
+    </head>
+    
+	<body class='login'> 
+        <section class="main-section">
+            <div class='form-main-title'>Sign Up</div>
+            <form class="form-main" id="signupForm">
+                <div class="form-option">
+                    <label class="form-title" form="first-fname">First Name</label>
+                    <input type="text" class="form-input" id="form-fname" placeholder="John" required>
+                </div> 
+                <div class="form-option">
+                    <label class="form-title" form="form-lname">Last Name</label>
+                    <input type="text" class="form-input" id="form-lname" placeholder="Smith" required>
+                </div>
+                <div class="form-option">
+                    <label class="form-title" for="form-email">Email Address</label>
+                    <input type="email" class="form-input" id="form-email" placeholder="Email" required>
+                </div>
+                <div class="form-option">
+                    <label class="form-title" for="form-password">Email Address</label>
+                    <input type="password"  class="form-input" id="form-password" placeholder="Password"  autocomplete="new-password"/required>
+                </div>
+                <div class="form-alert" id="form-alert" style="display: none;"></div>
+                <button type="submit" id="signup-form" class="form-button">Sign Up</button>
+            </form>
+            <div class="form-link">Already a member? Login <a href="/login">here</a>!</div>
+        </section>
+        <script src="../assets/js/validateSignup.js"></script>
+        <script src="../assets/js/signup.js"></script>
+	</body>
+</html>

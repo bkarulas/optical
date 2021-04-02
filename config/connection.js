@@ -1,18 +1,13 @@
 // MySQL connection 
 const mysql = require("mysql2/promise");
+require('dotenv').config();
 
-let pool;
-if (process.env.JAWSDB_URL) {
-	pool = mysql.createPool(process.env.JAWSDB_URL);
-} else {      
-	pool = mysql.createPool({
-		host: "localhost",
-		port: 3306,
-		user: "root",
-		password: "root",
-		database: "optical_db",
-		connectionLimit: 100
+let	pool = mysql.createPool({
+		host: process.env.DB_HOST ,
+		database: process.env.DB_NAME ,
+		port: process.env.DB_PORT ,
+		user: process.env.DB_USER ,
+		password: process.env.DB_PASSWORD
 	});
-}
 
 module.exports = pool;

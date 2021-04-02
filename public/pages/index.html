@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HOME</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link rel="stylesheet" href="../assets/css/main.css">
+    <link rel="stylesheet" href="../assets/css/index.css">
+</head>
+<body>
+    <section id='navBar'>
+        <div class="topnav" id="myTopnav">
+            <a href="/" class="active">Home</a>
+            <a href="/customer">Customers</a>
+            <a href="#contact">Contact</a>
+            <a href="#about">About</a>
+            <div class="dropdown">
+              <button class="dropbtn">
+                <i class="fas fa-user-circle"></i>  
+                <span id='loggedinuser'></span>
+              </button>
+              <div class="dropdown-content">
+                <a href="#">Profile</a>
+                <a href="/store">Store</a>
+                <a><form action='auth/logout' method="GET"><button type='submit'>Log Out</button></form></a>
+              </div>
+            </div>
+            
+            <a href="javascript:void(0);" class="icon" onclick="myFunction()">&#9776;</a>
+          </div>
+    </section>
+
+    <section id='title-bar'>
+        <img src="../assets/image/logo.png" alt="store_logo">
+    </section>
+
+    <section class='main-menu'>
+        <!-- ADMIN -->
+        <section id='admin'>
+            <div class='sec-title-bar' onclick="showMenu('admin')">
+                <div class='sec-main-title'>Admin</div>
+            </div>
+            <ul id='menu-admin' class='sec-main-menu' style="display: none;">
+                <li>View All Administrators</li>
+                <li>Create an Administortor Account</li>
+            </ul>
+        </section>
+        <!-- STORE -->
+        <section id='store'>
+            <div class='sec-title-bar' onclick="showMenu('store')">
+                <div class='sec-main-title'>Store</div>
+            </div>
+            <ul id='menu-store' class='sec-main-menu' style="display: none;">
+                <li>View Current Store Information</li>
+                <li>Create a Sub-Store</li>
+            </ul>
+        </section>
+        <!-- CUSTOMER -->
+        <section id='customers'>
+            <div class='sec-title-bar' onclick="showMenu('customer')">
+                <div class='sec-main-title'>Customers</div>
+            </div>
+            <ul id='menu-customer' class='sec-main-menu' style="display: none;">
+                <li>View All Customers</li>
+                <li>Create a new Customer</li>
+            </ul>
+        </section>
+        <!-- INVENTORY -->
+        <section id='inventory'>
+            <div class='sec-title-bar' onclick="showMenu('inventory')">
+                <div class='sec-main-title'>Inventory</div>
+            </div>
+            <ul id='menu-inventory' class='sec-main-menu' style="display: none;">
+                <li>View Store Inventory</li>
+                <li>Add New Inventory</li>
+            </ul>
+
+        </section>
+        <!-- REPORTS -->
+        <section id='reports'>
+            <div class='sec-title-bar' onclick="showMenu('reports')">
+                <div class='sec-main-title'>Reports</div>
+            </div>
+            <ul id='menu-reports' class='sec-main-menu' style="display: none;">
+                <li>View Reports</li>
+            </ul>
+        </section>
+
+    </section>
+    <script src="../assets/js/script.js"></script>
+    <script src="../assets/js/index.js"></script>
+</body>
+</html>
